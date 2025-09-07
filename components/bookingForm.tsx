@@ -19,7 +19,7 @@ const BookingFormComponent = ({ fetchSeats }: { fetchSeats: () => void }) => {
       setLoading(true);
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://ec2-16-171-6-49.eu-north-1.compute.amazonaws.com:8000/api/v1/seats/bookUnreservedSeats",
+        const response = await fetch("api/v1/seats/bookUnreservedSeats",
           {
             method: "POST",
             headers: {
@@ -48,7 +48,7 @@ const BookingFormComponent = ({ fetchSeats }: { fetchSeats: () => void }) => {
       setLoading(true);
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://ec2-16-171-6-49.eu-north-1.compute.amazonaws.com:8000/api/v1/seats/resetBooking",
+        const response = await fetch("api/v1/seats/resetBooking",
           {
             method: "POST",
             headers: {

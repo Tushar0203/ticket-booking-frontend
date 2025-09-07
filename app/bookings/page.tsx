@@ -15,7 +15,7 @@ export default function Bookings() {
   const fetchSeats = useCallback(async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://ec2-16-171-6-49.eu-north-1.compute.amazonaws.com:8000/api/v1/seats/getAllSeats",
+      const response = await fetch("api/v1/seats/getAllSeats",
         {
           method: "GET",
           headers: {
