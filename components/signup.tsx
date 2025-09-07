@@ -27,7 +27,7 @@ export const SignUp = () => {
 
   async function sendRequest() {
     try {
-      const response = await fetch("api/v1/user/signup", {
+      const response = await fetch("http://ec2-16-171-6-49.eu-north-1.compute.amazonaws.com:8000/api/v1/user/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

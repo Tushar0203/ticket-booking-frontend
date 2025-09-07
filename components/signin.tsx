@@ -21,7 +21,7 @@ export const SignIn = () => {
 
   async function sendRequest() {
     try {
-      const response = await fetch("api/v1/user/login", {
+      const response = await fetch("http://ec2-16-171-6-49.eu-north-1.compute.amazonaws.com:8000/api/v1/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
