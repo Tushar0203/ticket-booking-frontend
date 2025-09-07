@@ -36,7 +36,7 @@ export default function Bookings() {
 
   useEffect(() => {
     fetchSeats();
-  }, []);
+  }, [fetchSeats]);
 
   const reservedCount = seats.filter((s) => s.status === "RESERVED").length;
 

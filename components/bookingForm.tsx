@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export const BookingForm = React.memo(
-  ({ fetchSeats }: { fetchSeats: Function }) => {
+const BookingFormComponent = ({ fetchSeats }: { fetchSeats: () => void }) => {
     const [bookSeats, setBookSeats] = useState<number>(0);
     const [loading, setLoading] = useState<boolean>(false);
     const [message, setMessage] = useState<{
@@ -123,4 +122,6 @@ export const BookingForm = React.memo(
       </>
     );
   }
-);
+
+
+export const BookingForm = React.memo(BookingFormComponent)

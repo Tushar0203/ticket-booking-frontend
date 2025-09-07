@@ -7,8 +7,7 @@ interface InputSectionProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const InputSection = React.memo(
-  ({ title, placeholder, type, onChange }: InputSectionProps) => {
+export const InputSectionComponent = ({ title, placeholder, type, onChange }: InputSectionProps) => {
     return (
       <div className="w-full flex flex-col gap-1 mt-3">
         <label className="text-sm font-medium">{title}</label>
@@ -21,4 +20,5 @@ export const InputSection = React.memo(
       </div>
     );
   }
-);
+
+export const InputSection = React.memo(InputSectionComponent)

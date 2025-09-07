@@ -12,7 +12,7 @@ export interface SeatsProps {
   reservedCount: number;
 }
 
-export const Seats = React.memo(({ seats, reservedCount }: SeatsProps) => {
+export const SeatsComponent = ({ seats, reservedCount }: SeatsProps) => {
   return (
     <div className="flex flex-col justify-center items-center space-y-4">
       <div className="text-xl font-bold">Ticket Booking</div>
@@ -20,4 +20,6 @@ export const Seats = React.memo(({ seats, reservedCount }: SeatsProps) => {
       <BookingInformation reservedCount={reservedCount} />
     </div>
   );
-});
+};
+
+export const Seats = React.memo(SeatsComponent)

@@ -55,7 +55,7 @@ export const SignIn = () => {
         </div>
 
         <div className="text-sm sm:text-base text-slate-600 flex mt-2 flex-wrap justify-center">
-          <span className="mr-1">Don't have an account?</span>
+          <span className="mr-1">Don&apos;t have an account?</span>
           <a href="/signup" className="underline underline-offset-2">
             Signup
           </a>
